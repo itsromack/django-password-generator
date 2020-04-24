@@ -1,3 +1,14 @@
-<h3>This is the new template.</h3>
+<h1>Password Generator</h1>
 
-<p>This is your password <code>{{ password }}</code></p>
+<form action="{% url 'password' %}">
+Length <input type="number" name="length" value="8" /> characters
+<br>
+
+<input type="checkbox" name="numbers"> Include numbers<br>
+<input type="checkbox" name="uppercase"> Include uppercase characters<br>
+<input type="checkbox" name="special"> Include special characters (*!@$#%&?<{]~[})<br>
+
+<br>
+<input type="submit" name="Generate Password" />
+
+</form>
